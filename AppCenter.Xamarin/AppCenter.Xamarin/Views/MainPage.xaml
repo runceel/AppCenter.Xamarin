@@ -13,6 +13,7 @@
     </ContentPage.Resources>
 
     <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+        <Label Text="v1.1" />
         <Button Text="購買" Style="{StaticResource MenuButtonStyle}" Command="{Binding NotImplementedCommand}" CommandParameter="購買" />
         <Button Text="経費精算" Style="{StaticResource MenuButtonStyle}" Command="{Binding NotImplementedCommand}" CommandParameter="経費精算" />
         <Button Text="原価申請" Style="{StaticResource MenuButtonStyle}" Command="{Binding NotImplementedCommand}" CommandParameter="原価申請" />
