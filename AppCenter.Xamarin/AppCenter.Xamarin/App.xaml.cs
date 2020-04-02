@@ -5,6 +5,7 @@ using AppCenter.Xamarin.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Prism.Logging;
+using Microsoft.AppCenter.Distribute;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace AppCenter.Xamarin
@@ -23,7 +24,7 @@ namespace AppCenter.Xamarin
         protected override async void OnInitialized()
         {
             InitializeComponent();
-
+            Distribute.CheckForUpdate();
             await NavigationService.NavigateAsync("NavigationPage/MainPage");
         }
 
