@@ -6,6 +6,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace AppCenter.Xamarin.ViewModels
 {
@@ -17,6 +19,8 @@ namespace AppCenter.Xamarin.ViewModels
         private DelegateCommand<string> _notImplementedCommand;
         public DelegateCommand<string> NotImplementedCommand =>
             _notImplementedCommand ?? (_notImplementedCommand = new DelegateCommand<string>(ExecuteNotImplementedCommand));
+
+        public string AppVersion => VersionTracking.CurrentVersion;
 
         private void ExecuteNotImplementedCommand(string parameter)
         {
