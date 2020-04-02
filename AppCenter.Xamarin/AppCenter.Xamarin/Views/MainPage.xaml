@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCenter.Xamarin.Views.MainPage"
+             Title="{Binding Title}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="MenuButtonStyle" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Fill" />
+                <Setter Property="Margin" Value="10,10,10,0" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+        <Button Text="購買" Style="{StaticResource MenuButtonStyle}" Command="{Binding NotImplementedCommand}" CommandParameter="購買" />
+        <Button Text="経費精算" Style="{StaticResource MenuButtonStyle}" Command="{Binding NotImplementedCommand}" CommandParameter="経費精算" />
+        <Button Text="原価申請" Style="{StaticResource MenuButtonStyle}" Command="{Binding NotImplementedCommand}" CommandParameter="原価申請" />
+        <Button Text="作業工数入力" Style="{StaticResource MenuButtonStyle}" Command="{Binding NotImplementedCommand}" CommandParameter="作業工数入力" />
+        <Button Text="サポート" Style="{StaticResource MenuButtonStyle}" Command="{Binding NotImplementedCommand}" CommandParameter="サポート" />
+        <Button Text="クラッシュ" Style="{StaticResource MenuButtonStyle}" Command="{Binding CrashCommand}" />
+    </StackLayout>
+
+</ContentPage>
