@@ -13,6 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UITest", "UITest", "{AC86FB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppCenter.Xamarin.UITest", "AppCenter.Xamarin.UITest\AppCenter.Xamarin.UITest.csproj", "{1002FF38-E6ED-443A-AB03-D40E3F18A262}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{182CA58B-02D9-4067-99A8-207230B49FF6}"
+	ProjectSection(SolutionItems) = preProject
+		Run-Test.ps1 = Run-Test.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU

@@ -1,4 +1,5 @@
-﻿using Prism.Commands;
+﻿using Microsoft.AppCenter.Crashes;
+using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
 using Prism.Services;
@@ -20,8 +21,6 @@ namespace AppCenter.Xamarin.ViewModels
         public DelegateCommand<string> NotImplementedCommand =>
             _notImplementedCommand ?? (_notImplementedCommand = new DelegateCommand<string>(ExecuteNotImplementedCommand));
 
-        public string AppVersion => VersionTracking.CurrentVersion;
-
         private void ExecuteNotImplementedCommand(string parameter)
         {
             _pageDialogService.DisplayAlertAsync("情報", $"{parameter}が押されました。", "閉じる");
@@ -37,6 +36,16 @@ namespace AppCenter.Xamarin.ViewModels
             throw new InvalidOperationException("Crash button was clicked");
         }
 
+        private DelegateCommand _errorReportCommand;
+        public DelegateCommand ErrorReportCommand =>
+            _errorReportCommand ?? (_errorReportCommand = new DelegateCommand(ExecuteErrorReportCommand));
+
+        private void ExecuteErrorReportCommand()
+        {
+            Crashes.TrackError(new InvalidOperationException("An error occurred."));
+        }
+
+        public string AppVersion => VersionTracking.CurrentVersion;
         public MainPageViewModel(INavigationService navigationService, IPageDialogService pageDialogService, IAppCenterLogger appCenterLogger)
             : base(navigationService)
         {

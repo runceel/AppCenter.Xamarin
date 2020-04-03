@@ -19,5 +19,6 @@
         <Button Text="作業工数入力" AutomationId="MenuButton4" Style="{StaticResource MenuButtonStyle}" Command="{Binding NotImplementedCommand}" CommandParameter="作業工数入力" />
         <Button Text="サポート" AutomationId="MenuButton5" Style="{StaticResource MenuButtonStyle}" Command="{Binding NotImplementedCommand}" CommandParameter="サポート" />
         <Button Text="クラッシュ" AutomationId="MenuButton6" Style="{StaticResource MenuButtonStyle}" Command="{Binding CrashCommand}" />
+        <Button Text="エラーレポート" AutomationId="MenuButton7" Style="{StaticResource MenuButtonStyle}" Command="{Binding ErrorReportCommand}" />
     </StackLayout>
 </ContentPage>
