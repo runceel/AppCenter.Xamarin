@@ -14,6 +14,7 @@ namespace AppCenter.Xamarin.Droid
     {
         protected override void OnCreate(Bundle bundle)
         {
+            Distribute.UpdateTrack = UpdateTrack.Private;
             Microsoft.AppCenter.AppCenter.Start("d20cdde6-a371-45f7-bda6-21c1dda778e0",
                 typeof(Analytics), typeof(Crashes), typeof(Distribute));
             

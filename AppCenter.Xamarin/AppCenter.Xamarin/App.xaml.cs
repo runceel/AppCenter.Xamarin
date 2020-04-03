@@ -26,7 +26,6 @@ namespace AppCenter.Xamarin
         {
             InitializeComponent();
             VersionTracking.Track();
-            Distribute.CheckForUpdate();
             await NavigationService.NavigateAsync("NavigationPage/MainPage");
         }
 

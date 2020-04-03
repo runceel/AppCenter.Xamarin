@@ -24,6 +24,8 @@ namespace AppCenter.Xamarin.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            Distribute.DontCheckForUpdatesInDebug();
+            Distribute.UpdateTrack = UpdateTrack.Private;
             Microsoft.AppCenter.AppCenter.Start("1cbe5106-e6e8-4c76-93b6-77c3bdc4d332",
                typeof(Analytics), typeof(Crashes), typeof(Distribute));
             global::Xamarin.Forms.Forms.Init();
