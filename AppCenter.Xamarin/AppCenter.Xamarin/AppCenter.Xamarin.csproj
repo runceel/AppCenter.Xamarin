@@ -5,6 +5,10 @@
     <Configurations>Debug;Release;UITest</Configurations>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UITest|AnyCPU'">
+    <DefineConstants>TRACE;ENABLE_TEST_CLOUD</DefineConstants>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.1.0" />
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.1.0" />
