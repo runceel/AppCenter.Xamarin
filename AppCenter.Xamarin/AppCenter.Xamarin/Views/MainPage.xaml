@@ -12,12 +12,12 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="{Binding AppVersion}" FontSize="Medium" HorizontalOptions="Center" />
-        <Button Text="購買" Style="{StaticResource MenuButtonStyle}" Command="{Binding NotImplementedCommand}" CommandParameter="購買" />
-        <Button Text="経費精算" Style="{StaticResource MenuButtonStyle}" Command="{Binding NotImplementedCommand}" CommandParameter="経費精算" />
-        <Button Text="原価申請" Style="{StaticResource MenuButtonStyle}" Command="{Binding NotImplementedCommand}" CommandParameter="原価申請" />
-        <Button Text="作業工数入力" Style="{StaticResource MenuButtonStyle}" Command="{Binding NotImplementedCommand}" CommandParameter="作業工数入力" />
-        <Button Text="サポート" Style="{StaticResource MenuButtonStyle}" Command="{Binding NotImplementedCommand}" CommandParameter="サポート" />
-        <Button Text="クラッシュ" Style="{StaticResource MenuButtonStyle}" Command="{Binding CrashCommand}" />
+        <Label Text="{Binding AppVersion}" AutomationId="AppVersion" FontSize="Medium" HorizontalOptions="Center" />
+        <Button Text="購買" AutomationId="MenuButton1" Style="{StaticResource MenuButtonStyle}" Command="{Binding NotImplementedCommand}" CommandParameter="購買" />
+        <Button Text="経費精算" AutomationId="MenuButton2" Style="{StaticResource MenuButtonStyle}" Command="{Binding NotImplementedCommand}" CommandParameter="経費精算" />
+        <Button Text="原価申請" AutomationId="MenuButton3" Style="{StaticResource MenuButtonStyle}" Command="{Binding NotImplementedCommand}" CommandParameter="原価申請" />
+        <Button Text="作業工数入力" AutomationId="MenuButton4" Style="{StaticResource MenuButtonStyle}" Command="{Binding NotImplementedCommand}" CommandParameter="作業工数入力" />
+        <Button Text="サポート" AutomationId="MenuButton5" Style="{StaticResource MenuButtonStyle}" Command="{Binding NotImplementedCommand}" CommandParameter="サポート" />
+        <Button Text="クラッシュ" AutomationId="MenuButton6" Style="{StaticResource MenuButtonStyle}" Command="{Binding CrashCommand}" />
     </StackLayout>
 </ContentPage>
