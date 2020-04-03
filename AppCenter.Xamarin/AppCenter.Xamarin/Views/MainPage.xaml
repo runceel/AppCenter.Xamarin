@@ -8,6 +8,8 @@
             <Style x:Key="MenuButtonStyle" TargetType="Button">
                 <Setter Property="HorizontalOptions" Value="Fill" />
                 <Setter Property="Margin" Value="10,10,10,0" />
+                <Setter Property="BackgroundColor" Value="Blue" />
+                <Setter Property="TextColor" Value="White" />
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>

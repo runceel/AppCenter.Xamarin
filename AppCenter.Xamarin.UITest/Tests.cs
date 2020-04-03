@@ -30,11 +30,13 @@ namespace AppCenter.Xamarin.UITest
         {
             app.Screenshot("Init");
             app.Tap("MenuButton1");
+            app.WaitForElement(c => c.Marked("message"));
             app.Screenshot("Tap MenuButton1");
             var message = app.Query(c => c.Marked("message")).FirstOrDefault();
             Assert.IsNotNull(message);
             Assert.AreEqual("購買が押されました。", message.Text);
             app.Tap("button2");
+            app.WaitForNoElement(c => c.Marked("message"));
             app.Screenshot("Dialog was closed.");
         }
 
